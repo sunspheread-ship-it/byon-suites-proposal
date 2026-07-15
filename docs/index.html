@@ -1,0 +1,293 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Vimigo Proposal for Byon Suites</title>
+  <meta name="description" content="A focused 30-day business transformation proposal to connect Byon Suites' direction, performance, visibility and fair recognition.">
+  <meta property="og:title" content="Vimigo × Byon Suites — Business Transformation Proposal">
+  <meta property="og:description" content="From daily operations to visible, accountable performance.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="og-proposal.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <style>:root {
+  --emerald-950: #062b25;
+  --emerald-900: #0a3830;
+  --emerald-800: #155247;
+  --emerald-700: #24695c;
+  --ivory: #f4efe4;
+  --paper: #fffdf8;
+  --sand: #e5dccb;
+  --gold: #c89b45;
+  --gold-soft: #ebd9b2;
+  --ink: #17342d;
+  --muted: #65766f;
+  --line: rgba(23, 52, 45, 0.14);
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; background: var(--ivory); }
+body {
+  margin: 0;
+  min-height: 100vh;
+  color: var(--ink);
+  background: var(--ivory);
+  font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  letter-spacing: -.012em;
+}
+
+a { color: inherit; text-decoration: none; }
+h1, h2, h3, p { margin: 0; }
+main { overflow: hidden; }
+
+.site-nav {
+  position: fixed;
+  inset: 0 0 auto;
+  z-index: 20;
+  height: 82px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 0 max(28px, calc((100vw - 1320px) / 2));
+  border-bottom: 1px solid rgba(255,255,255,.12);
+  color: #fffaf0;
+  background: rgba(6,43,37,.88);
+  backdrop-filter: blur(18px);
+}
+.brand { display: flex; align-items: center; gap: 12px; }
+.brand-mark {
+  width: 40px;
+  height: 40px;
+  display: grid;
+  place-items: center;
+  border: 1px solid rgba(235,217,178,.6);
+  border-radius: 50%;
+  color: var(--gold-soft);
+  font-family: Georgia, serif;
+  font-size: 20px;
+  font-style: italic;
+}
+.brand strong { display: block; font-size: 18px; font-weight: 750; letter-spacing: .02em; }
+.brand small { display: block; margin-top: 2px; color: rgba(255,250,240,.55); font-size: 9px; letter-spacing: .12em; text-transform: uppercase; }
+.nav-links { display: flex; align-items: center; gap: 28px; }
+.nav-links a { color: rgba(255,250,240,.72); font-size: 12px; font-weight: 650; transition: .2s ease; }
+.nav-links a:hover, .nav-links a:focus-visible { color: #fff; }
+.nav-links .nav-cta { padding: 11px 16px; border: 1px solid rgba(235,217,178,.35); border-radius: 999px; color: var(--gold-soft); }
+
+.hero {
+  position: relative;
+  min-height: 810px;
+  display: grid;
+  grid-template-columns: minmax(0,1.35fr) minmax(340px,.65fr);
+  align-items: center;
+  gap: clamp(40px,7vw,110px);
+  padding: 150px max(28px, calc((100vw - 1320px) / 2)) 86px;
+  color: #fffaf0;
+  background:
+    radial-gradient(circle at 78% 25%, rgba(200,155,69,.15), transparent 23rem),
+    linear-gradient(135deg, #062b25, #0a3931 62%, #0b302a);
+}
+.hero::before, .hero::after {
+  content: "";
+  position: absolute;
+  border: 1px solid rgba(235,217,178,.12);
+  border-radius: 50%;
+}
+.hero::before { width: 470px; height: 470px; right: -220px; top: 120px; box-shadow: 0 0 0 62px rgba(235,217,178,.025), 0 0 0 124px rgba(235,217,178,.016); }
+.hero::after { width: 280px; height: 280px; left: -160px; bottom: -160px; box-shadow: 0 0 0 45px rgba(235,217,178,.025); }
+.hero-copy, .proposal-note { position: relative; z-index: 1; }
+.kicker { color: var(--gold-soft); font-size: 11px; font-weight: 750; letter-spacing: .16em; text-transform: uppercase; }
+.kicker.dark { color: var(--emerald-700); }
+.hero h1 {
+  max-width: 850px;
+  margin-top: 24px;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(56px,6.1vw,96px);
+  font-weight: 500;
+  line-height: .96;
+  letter-spacing: -.055em;
+}
+.hero h1 em { color: var(--gold-soft); font-style: italic; font-weight: 400; }
+.hero-lead {
+  max-width: 690px;
+  margin-top: 30px;
+  color: rgba(255,250,240,.7);
+  font-size: clamp(17px,1.5vw,21px);
+  line-height: 1.65;
+}
+.hero-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 36px; }
+.button {
+  min-height: 50px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 20px;
+  border: 1px solid transparent;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 750;
+  transition: .2s ease;
+}
+.button:hover { transform: translateY(-2px); }
+.button-primary { color: var(--emerald-950); background: var(--gold-soft); }
+.button-ghost { border-color: rgba(255,255,255,.2); color: #fffaf0; }
+.proposal-note {
+  padding: 34px;
+  border: 1px solid rgba(235,217,178,.2);
+  border-radius: 2px;
+  background: rgba(255,255,255,.055);
+  backdrop-filter: blur(12px);
+}
+.proposal-note > p:first-child { color: var(--gold-soft); font-size: 10px; font-weight: 750; letter-spacing: .14em; text-transform: uppercase; }
+.proposal-note h2 { margin-top: 18px; font-family: Georgia,serif; font-size: clamp(31px,3vw,43px); font-weight: 500; line-height: 1.12; }
+.pilot-teams { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 27px; }
+.pilot-teams span { padding: 8px 11px; border: 1px solid rgba(235,217,178,.24); border-radius: 999px; color: rgba(255,250,240,.8); font-size: 10px; }
+.note-copy { margin-top: 24px; padding-top: 22px; border-top: 1px solid rgba(255,255,255,.12); color: rgba(255,250,240,.6); font-size: 13px; line-height: 1.65; }
+.hero-index { position: absolute; left: max(28px, calc((100vw - 1320px) / 2)); bottom: 28px; color: rgba(255,255,255,.35); font-family: Georgia,serif; font-size: 11px; letter-spacing: .12em; }
+
+.context-strip {
+  display: grid;
+  grid-template-columns: 1.2fr repeat(3,1fr);
+  align-items: center;
+  min-height: 118px;
+  padding: 22px max(28px, calc((100vw - 1320px) / 2));
+  border-bottom: 1px solid var(--line);
+  background: var(--paper);
+}
+.context-strip > p { color: var(--muted); font-size: 11px; font-weight: 750; letter-spacing: .13em; text-transform: uppercase; }
+.context-strip > div { padding-left: 28px; border-left: 1px solid var(--line); }
+.context-strip strong { display: block; font-family: Georgia,serif; font-size: 28px; font-weight: 500; }
+.context-strip span { display: block; margin-top: 4px; color: var(--muted); font-size: 11px; }
+
+.section { padding: 120px max(28px, calc((100vw - 1220px) / 2)); }
+.section-intro { display: grid; grid-template-columns: .68fr 1.5fr .82fr; gap: 44px; align-items: start; }
+.section-intro.compact { grid-template-columns: .48fr 1.25fr .8fr; }
+.section-intro h2, .solution-heading h2, .pilot-copy h2, .outcomes-heading h2, .next-step h2 {
+  font-family: Georgia,serif;
+  font-size: clamp(40px,4.5vw,66px);
+  font-weight: 500;
+  line-height: 1.04;
+  letter-spacing: -.045em;
+}
+.section-intro > p:last-child, .solution-heading > p:last-child, .outcomes-heading > p:last-child {
+  color: var(--muted);
+  font-size: 15px;
+  line-height: 1.7;
+}
+.challenge-list { margin-top: 75px; border-top: 1px solid var(--line); }
+.challenge-list article { display: grid; grid-template-columns: 90px .8fr 1.2fr; align-items: start; gap: 30px; padding: 34px 0; border-bottom: 1px solid var(--line); }
+.challenge-list article > span { color: var(--gold); font-family: Georgia,serif; font-size: 18px; }
+.challenge-list h3 { max-width: 330px; font-family: Georgia,serif; font-size: 27px; font-weight: 500; line-height: 1.18; }
+.challenge-list article p { color: var(--muted); font-size: 14px; line-height: 1.75; }
+
+.solution { color: #fffaf0; background: var(--emerald-950); }
+.solution-heading { display: grid; grid-template-columns: .45fr 1.2fr .8fr; gap: 44px; align-items: start; }
+.solution-heading > p:last-child { color: rgba(255,250,240,.6); }
+.solution-flow { display: grid; grid-template-columns: repeat(4,1fr); margin-top: 76px; border-top: 1px solid rgba(255,255,255,.14); border-bottom: 1px solid rgba(255,255,255,.14); }
+.solution-flow article { min-height: 330px; padding: 28px 25px 32px; border-left: 1px solid rgba(255,255,255,.14); }
+.solution-flow article:last-child { border-right: 1px solid rgba(255,255,255,.14); }
+.flow-number { color: rgba(255,255,255,.34); font-family: Georgia,serif; font-size: 15px; }
+.solution-flow article > p { margin-top: 84px; color: var(--gold-soft); font-size: 10px; font-weight: 750; letter-spacing: .14em; text-transform: uppercase; }
+.solution-flow h3 { margin-top: 14px; font-family: Georgia,serif; font-size: 26px; font-weight: 500; line-height: 1.15; }
+.solution-flow article > span { display: block; margin-top: 17px; color: rgba(255,250,240,.58); font-size: 13px; line-height: 1.65; }
+
+.operating-model { background: #faf7f0; }
+.os-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 1px; margin-top: 72px; background: var(--line); border: 1px solid var(--line); }
+.os-grid article { min-height: 250px; padding: 30px; background: #faf7f0; }
+.os-grid article > span { color: var(--gold); font-family: Georgia,serif; font-size: 15px; }
+.os-grid h3 { margin-top: 54px; font-family: Georgia,serif; font-size: 27px; font-weight: 500; }
+.os-grid p { margin-top: 10px; color: var(--ink); font-size: 13px; font-weight: 700; }
+.os-grid small { display: block; margin-top: 12px; color: var(--muted); font-size: 12px; line-height: 1.55; }
+
+.pilot { display: grid; grid-template-columns: 1.18fr .82fr; gap: 80px; color: #fffaf0; background: linear-gradient(110deg,var(--emerald-900),var(--emerald-950)); }
+.pilot-copy h2 { max-width: 700px; margin-top: 22px; }
+.pilot-copy > p:not(.kicker) { max-width: 650px; margin-top: 25px; color: rgba(255,250,240,.63); font-size: 15px; line-height: 1.75; }
+.pilot-chain { display: flex; flex-wrap: wrap; align-items: center; gap: 12px; margin-top: 34px; }
+.pilot-chain span { padding: 10px 13px; border: 1px solid rgba(235,217,178,.28); border-radius: 999px; color: var(--gold-soft); font-size: 11px; }
+.pilot-chain b { color: rgba(255,255,255,.35); font-weight: 500; }
+.pilot-deliverables { padding: 36px; border: 1px solid rgba(235,217,178,.22); background: rgba(255,255,255,.05); }
+.pilot-deliverables > p { color: var(--gold-soft); font-size: 10px; font-weight: 750; letter-spacing: .14em; text-transform: uppercase; }
+.pilot-deliverables ul { margin: 26px 0 0; padding: 0; list-style: none; }
+.pilot-deliverables li { position: relative; padding: 15px 0 15px 28px; border-top: 1px solid rgba(255,255,255,.12); color: rgba(255,250,240,.72); font-size: 13px; line-height: 1.5; }
+.pilot-deliverables li::before { content: "✓"; position: absolute; left: 0; color: var(--gold-soft); }
+
+.roadmap { background: var(--paper); }
+.timeline { display: grid; grid-template-columns: repeat(5,1fr); margin-top: 72px; }
+.timeline article { position: relative; min-height: 280px; padding: 40px 24px 0 0; border-top: 1px solid var(--line); }
+.timeline-marker { position: absolute; top: -14px; left: 0; width: 28px; height: 28px; display: grid; place-items: center; border: 1px solid var(--gold); border-radius: 50%; background: var(--paper); }
+.timeline-marker span { color: var(--emerald-800); font-family: Georgia,serif; font-size: 11px; }
+.timeline article > p { color: var(--gold); font-size: 10px; font-weight: 750; letter-spacing: .13em; text-transform: uppercase; }
+.timeline h3 { margin-top: 17px; font-family: Georgia,serif; font-size: 24px; font-weight: 500; line-height: 1.16; }
+.timeline small { display: block; max-width: 200px; margin-top: 14px; color: var(--muted); font-size: 12px; line-height: 1.6; }
+.roadmap-guardrail { padding: 18px 20px; border: 1px solid rgba(200,155,69,.38); color: #6f5a35; background: rgba(235,217,178,.22); font-size: 12px; line-height: 1.6; }
+
+.outcomes { display: grid; grid-template-columns: 1fr 1fr; gap: 90px; background: #e8dfce; }
+.outcomes-heading h2 { margin-top: 20px; }
+.outcomes-heading > p:last-child { max-width: 560px; margin-top: 24px; }
+.outcome-list { border-top: 1px solid rgba(23,52,45,.2); }
+.outcome-list div { display: grid; grid-template-columns: 46px 1fr; gap: 16px; align-items: center; min-height: 72px; border-bottom: 1px solid rgba(23,52,45,.2); }
+.outcome-list span { color: var(--gold); font-family: Georgia,serif; font-size: 14px; }
+.outcome-list p { font-family: Georgia,serif; font-size: 19px; }
+
+.next-step { padding: 120px max(28px, calc((100vw - 1040px) / 2)); text-align: center; color: #fffaf0; background: var(--emerald-950); }
+.next-step h2 { max-width: 900px; margin: 24px auto 0; }
+.next-step > p:not(.kicker) { max-width: 760px; margin: 27px auto 0; color: rgba(255,250,240,.63); font-size: 15px; line-height: 1.75; }
+.decision-row { display: grid; grid-template-columns: repeat(3,1fr); gap: 1px; margin-top: 52px; background: rgba(255,255,255,.14); border: 1px solid rgba(255,255,255,.14); }
+.decision-row div { min-height: 116px; display: flex; flex-direction: column; justify-content: center; padding: 20px; background: var(--emerald-950); }
+.decision-row span { color: var(--gold-soft); font-size: 9px; font-weight: 750; letter-spacing: .13em; text-transform: uppercase; }
+.decision-row strong { margin-top: 10px; font-family: Georgia,serif; font-size: 18px; font-weight: 500; }
+.button-light { margin-top: 34px; color: var(--emerald-950); background: var(--ivory); }
+
+footer { min-height: 140px; display: grid; grid-template-columns: 1fr 1fr 1fr; align-items: center; gap: 30px; padding: 30px max(28px, calc((100vw - 1220px) / 2)); color: rgba(255,250,240,.55); background: #041f1b; font-size: 10px; line-height: 1.5; }
+.footer-brand { display: flex; align-items: center; gap: 10px; color: #fffaf0; }
+.footer-brand .brand-mark { width: 34px; height: 34px; }
+.footer-brand strong { font-size: 16px; }
+footer p:last-child { text-align: right; }
+
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } *,*::before,*::after { transition-duration: .01ms !important; } }
+@media (max-width: 1020px) {
+  .hero { grid-template-columns: 1fr; min-height: auto; }
+  .proposal-note { max-width: 620px; }
+  .context-strip { grid-template-columns: repeat(3,1fr); gap: 24px; }
+  .context-strip > p { grid-column: 1/-1; }
+  .section-intro, .section-intro.compact, .solution-heading { grid-template-columns: .5fr 1.5fr; }
+  .section-intro > p:last-child, .solution-heading > p:last-child { grid-column: 2; }
+  .solution-flow { grid-template-columns: repeat(2,1fr); }
+  .os-grid { grid-template-columns: repeat(2,1fr); }
+  .pilot, .outcomes { grid-template-columns: 1fr; }
+  .timeline { grid-template-columns: repeat(2,1fr); gap: 45px 0; }
+}
+@media (max-width: 720px) {
+  .site-nav { height: 70px; padding: 0 18px; }
+  .brand small { display: none; }
+  .nav-links a:not(.nav-cta) { display: none; }
+  .hero { padding: 126px 20px 75px; }
+  .hero h1 { font-size: clamp(48px,14vw,70px); }
+  .proposal-note { padding: 26px; }
+  .hero-index { left: 20px; }
+  .context-strip { grid-template-columns: 1fr; padding: 28px 20px; }
+  .context-strip > div { padding: 18px 0 0; border-left: 0; border-top: 1px solid var(--line); }
+  .section { padding: 82px 20px; }
+  .section-intro, .section-intro.compact, .solution-heading { grid-template-columns: 1fr; gap: 20px; }
+  .section-intro > p:last-child, .solution-heading > p:last-child { grid-column: auto; }
+  .challenge-list { margin-top: 45px; }
+  .challenge-list article { grid-template-columns: 48px 1fr; gap: 15px; }
+  .challenge-list article p { grid-column: 2; }
+  .solution-flow { grid-template-columns: 1fr; }
+  .solution-flow article { min-height: 250px; border-right: 1px solid rgba(255,255,255,.14); }
+  .solution-flow article > p { margin-top: 48px; }
+  .os-grid { grid-template-columns: 1fr; }
+  .pilot { gap: 42px; }
+  .pilot-chain b { display: none; }
+  .timeline { grid-template-columns: 1fr; gap: 34px; }
+  .timeline article { min-height: 220px; }
+  .timeline small { max-width: none; }
+  .decision-row { grid-template-columns: 1fr; }
+  footer { grid-template-columns: 1fr; text-align: left; }
+  footer p:last-child { text-align: left; }
+}
+</style>
+</head>
+<body><main><nav class="site-nav" aria-label="Proposal navigation"><a class="brand" href="#top" aria-label="Vimigo proposal home"><span class="brand-mark">V</span><span><strong>vimigo</strong><small>Proposal for Byon Suites</small></span></a><div class="nav-links"><a href="#opportunity">Opportunity</a><a href="#solution">Solution</a><a href="#roadmap">30-day plan</a><a class="nav-cta" href="#next-step">Next step</a></div></nav><section class="hero" id="top"><div class="hero-copy"><p class="kicker">Business transformation proposal · July 2026</p><h1>Turn daily operations into <em>visible, accountable performance.</em></h1><p class="hero-lead">Vimigo can help Byon Suites connect company direction, department KPIs, weekly execution and fair recognition — without forcing a full-company rollout on Day 1.</p><div class="hero-actions"><a class="button button-primary" href="#solution">See the proposed approach</a><a class="button button-ghost" href="#roadmap">View 30-day roadmap</a></div></div><aside class="proposal-note" aria-label="Our recommendation"><p>Our strongest recommendation</p><h2>Start with one focused 30-day implementation.</h2><div class="pilot-teams"><span>Operations</span><span>Customer Service</span><span>Revenue Team</span></div><p class="note-copy">Prove the management rhythm and data first. Expand rewards, leaderboards and AI automation only after the foundation is trusted.</p></aside><div class="hero-index">01 / Proposal</div></section><section class="context-strip" aria-label="Byon Suites context"><p>Built around Byon Suites&#x27; current structure</p><div><strong>11</strong><span>department KPI scorecards</span></div><div><strong>HQ + Sites</strong><span>multi-location operating model</span></div><div><strong>1 Goal</strong><span>shared 90-day management focus</span></div></section><section class="section opportunity" id="opportunity"><div class="section-intro"><p class="kicker dark">The opportunity</p><h2>Byon does not need another KPI file. It needs a system that makes the KPIs work.</h2><p>Your existing KPI draft already defines meaningful measures across departments. The next challenge is turning those measures into a repeatable management rhythm.</p></div><div class="challenge-list"><article><span>01</span><div><h3>Goals can get lost between departments</h3><p>Byon has interdependent teams across revenue, operations, customer service, finance, marketing and support. Without one operating rhythm, priorities can become departmental activities instead of shared business results.</p></div></article><article><span>02</span><div><h3>Management visibility arrives too late</h3><p>A KPI workbook is a useful start, but management still needs reliable data ownership, review frequency and clear follow-up when a metric slips.</p></div></article><article><span>03</span><div><h3>Rewards can feel subjective</h3><p>If recognition or incentives are introduced before role definitions and data are trusted, employees may question fairness instead of feeling motivated.</p></div></article></div></section><section class="section solution" id="solution"><div class="solution-heading"><p class="kicker">What Vimigo changes</p><h2>From “management chasing” to a performance-driven operating rhythm.</h2><p>Vimigo is not only HR software and not only a KPI tool. It connects direction, execution, evidence, review and recognition.</p></div><div class="solution-flow"><article><div class="flow-number">01</div><p>Direction</p><h3>One 90-day company goal</h3><span>Translate management direction into a small number of priorities for each participating department.</span></article><article><div class="flow-number">02</div><p>Performance</p><h3>Role-specific execution</h3><span>Connect key actions, measurable results, owners and weekly review conversations.</span></article><article><div class="flow-number">03</div><p>Visibility</p><h3>Management sees exceptions</h3><span>Make delays, gaps and ownership visible early enough for managers to intervene.</span></article><article><div class="flow-number">04</div><p>Reward</p><h3>Recognition follows evidence</h3><span>Introduce recognition and rewards only after KPI rules, data and approvals are accepted.</span></article></div></section><section class="section operating-model"><div class="section-intro compact"><p class="kicker dark">The Vimigo framework</p><h2>Six operating systems, one management language.</h2><p>For Byon, the first priority is Direction, Performance and disciplined execution. Reward and AI come in when the data and ownership are ready.</p></div><div class="os-grid"><article><span>01</span><h3>Direction OS</h3><p>Where exactly is Byon going?</p><small>A 12-month direction and one practical 90-day goal.</small></article><article><span>02</span><h3>Performance OS</h3><p>How does each team deliver it?</p><small>Role goals, key actions, results, owners and reviews.</small></article><article><span>03</span><h3>Money OS</h3><p>What affects revenue and profit?</p><small>Connect commercial outcomes to operational drivers.</small></article><article><span>04</span><h3>Reward OS</h3><p>What happens when results improve?</p><small>Transparent recognition, Diamonds and approved rewards.</small></article><article><span>05</span><h3>Talent OS</h3><p>Who owns the work and needs support?</p><small>Role fit, capability gaps and development priorities.</small></article><article><span>06</span><h3>AI Execution OS</h3><p>What should AI handle?</p><small>Automate repeatable work with explicit human approval.</small></article></div></section><section class="section pilot"><div class="pilot-copy"><p class="kicker">Recommended pilot</p><h2>One guest journey. Three connected departments.</h2><p>Start where commercial performance and guest experience meet: Revenue sets the demand and pricing direction, Operations delivers unit readiness, and Customer Service protects the guest relationship.</p><div class="pilot-chain" aria-label="Recommended pilot departments"><span>Revenue Team</span><b>→</b><span>Operations</span><b>→</b><span>Customer Service</span></div></div><div class="pilot-deliverables"><p>What management receives</p><ul><li>One agreed 90-day goal and pilot success criteria</li><li>Role-specific KPI definitions and accountable owners</li><li>A weekly review rhythm with exception follow-up</li><li>A first-month adoption and data-quality report</li><li>A go / adjust / expand decision for Phase 2</li></ul></div></section><section class="section roadmap" id="roadmap"><div class="section-intro compact"><p class="kicker dark">Implementation roadmap</p><h2>A 30-day management implementation — not a software setup exercise.</h2></div><div class="timeline"><article><div class="timeline-marker"><span>1</span></div><p>Phase 0</p><h3>Diagnose and align</h3><small>Confirm the 90-day business goal, pilot departments, role owners, baseline data and current approval rules.</small></article><article><div class="timeline-marker"><span>2</span></div><p>Week 1</p><h3>Build the foundation</h3><small>Set up roles, access, daily operating workflows and manager ownership. Resolve data gaps before scoring people.</small></article><article><div class="timeline-marker"><span>3</span></div><p>Week 2</p><h3>Stabilise daily use</h3><small>Review exceptions, improve adoption and make sure the information is reliable enough for management decisions.</small></article><article><div class="timeline-marker"><span>4</span></div><p>Week 3</p><h3>Connect goals to KPIs</h3><small>Configure role-specific goals for Operations, Customer Service and Revenue, then begin structured weekly reviews.</small></article><article><div class="timeline-marker"><span>5</span></div><p>Week 4</p><h3>Review and decide</h3><small>Deliver an adoption and data-quality review, refine targets and decide whether rewards or leaderboards are ready.</small></article></div><div class="roadmap-guardrail"><strong>Important:</strong> Cash rewards, negative scoring and leaderboards should not launch until management, Finance and department owners approve the rules and the underlying data is reliable.</div></section><section class="section outcomes"><div class="outcomes-heading"><p class="kicker">Expected business outcomes</p><h2>Better management visibility first. Measurable performance improvement next.</h2><p>Exact ROI and reward budgets should be confirmed only after Byon validates its baseline data.</p></div><div class="outcome-list"><div><span>01</span><p>Less manual chasing for updates and approvals</p></div><div><span>02</span><p>Faster visibility into operational exceptions</p></div><div><span>03</span><p>Clearer accountability by role and department</p></div><div><span>04</span><p>More consistent performance conversations</p></div><div><span>05</span><p>Fairer recognition based on controllable results</p></div><div><span>06</span><p>A stronger foundation for future AI automation</p></div></div></section><section class="next-step" id="next-step"><p class="kicker">Recommended next step</p><h2>Run a 60-minute management diagnosis before discussing software modules.</h2><p>Confirm Byon&#x27;s top three bottlenecks, select the pilot goal and appoint one accountable owner. From there, Vimigo can prepare the exact 30-day scope, implementation responsibilities and commercial proposal.</p><div class="decision-row"><div><span>Decision needed</span><strong>Approve the management diagnosis</strong></div><div><span>Suggested owner</span><strong>CEO / General Manager</strong></div><div><span>Output</span><strong>Prioritised 30-day pilot scope</strong></div></div><a class="button button-light" href="#top">Review proposal from the top</a></section><footer><div class="footer-brand"><span class="brand-mark">V</span><strong>vimigo</strong></div><p>Prepared for Byon Suites · Private discussion draft · July 2026</p><p>Scope, pricing, ROI and reward mechanics are subject to management validation.</p></footer></main></body>
+</html>
