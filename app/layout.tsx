@@ -9,19 +9,19 @@ export async function generateMetadata(): Promise<Metadata> {
   const origin = `${protocol}://${host}`;
 
   return {
-    title: "Byon Suites Reward",
-    description: "A transparent performance and recognition experience for the Byon Suites team.",
+    title: "Vimigo Proposal for Byon Suites",
+    description: "A focused 30-day business transformation proposal to connect Byon Suites' direction, performance, visibility and fair recognition.",
     openGraph: {
-      title: "Byon Suites Reward",
-      description: "Recognition that moves us forward.",
+      title: "Vimigo × Byon Suites — Business Transformation Proposal",
+      description: "From daily operations to visible, accountable performance.",
       type: "website",
-      images: [{ url: `${origin}/og.png`, width: 1200, height: 630, alt: "Byon Suites Reward" }],
+      images: [{ url: `${origin}/og-proposal.png`, width: 1200, height: 630, alt: "Vimigo business transformation proposal for Byon Suites" }],
     },
     twitter: {
       card: "summary_large_image",
-      title: "Byon Suites Reward",
-      description: "Recognition that moves us forward.",
-      images: [`${origin}/og.png`],
+      title: "Vimigo × Byon Suites — Business Transformation Proposal",
+      description: "From daily operations to visible, accountable performance.",
+      images: [`${origin}/og-proposal.png`],
     },
   };
 }

@@ -1,142 +1,226 @@
-const kpis = [
-  { name: "Unit readiness", value: 96, note: "Units ready before guest arrival" },
-  { name: "Housekeeping pass", value: 94, note: "Inspection pass rate" },
-  { name: "Maintenance SLA", value: 87, note: "Work orders completed on time" },
+const challenges = [
+  {
+    number: "01",
+    title: "Goals can get lost between departments",
+    text: "Byon has interdependent teams across revenue, operations, customer service, finance, marketing and support. Without one operating rhythm, priorities can become departmental activities instead of shared business results.",
+  },
+  {
+    number: "02",
+    title: "Management visibility arrives too late",
+    text: "A KPI workbook is a useful start, but management still needs reliable data ownership, review frequency and clear follow-up when a metric slips.",
+  },
+  {
+    number: "03",
+    title: "Rewards can feel subjective",
+    text: "If recognition or incentives are introduced before role definitions and data are trusted, employees may question fairness instead of feeling motivated.",
+  },
 ];
 
-const recognition = [
-  { mark: "+", title: "Guest-ready champion", note: "Recognised by Operations Lead - 12 July", points: "+120" },
-  { mark: "✓", title: "Zero complaint week", note: "Service consistency milestone - 7 July", points: "+80" },
-  { mark: "★", title: "Fast maintenance handover", note: "Team recognition - 3 July", points: "+60" },
+const solutionSteps = [
+  { label: "Direction", title: "One 90-day company goal", text: "Translate management direction into a small number of priorities for each participating department." },
+  { label: "Performance", title: "Role-specific execution", text: "Connect key actions, measurable results, owners and weekly review conversations." },
+  { label: "Visibility", title: "Management sees exceptions", text: "Make delays, gaps and ownership visible early enough for managers to intervene." },
+  { label: "Reward", title: "Recognition follows evidence", text: "Introduce recognition and rewards only after KPI rules, data and approvals are accepted." },
 ];
 
-const departments = [
-  { rank: "01", name: "Customer Service", score: 95 },
-  { rank: "02", name: "Operations", score: 92, active: true },
-  { rank: "03", name: "Revenue Team", score: 90 },
-  { rank: "04", name: "Business Development", score: 88 },
+const outcomes = [
+  "Less manual chasing for updates and approvals",
+  "Faster visibility into operational exceptions",
+  "Clearer accountability by role and department",
+  "More consistent performance conversations",
+  "Fairer recognition based on controllable results",
+  "A stronger foundation for future AI automation",
+];
+
+const roadmap = [
+  { week: "Phase 0", title: "Diagnose and align", text: "Confirm the 90-day business goal, pilot departments, role owners, baseline data and current approval rules." },
+  { week: "Week 1", title: "Build the foundation", text: "Set up roles, access, daily operating workflows and manager ownership. Resolve data gaps before scoring people." },
+  { week: "Week 2", title: "Stabilise daily use", text: "Review exceptions, improve adoption and make sure the information is reliable enough for management decisions." },
+  { week: "Week 3", title: "Connect goals to KPIs", text: "Configure role-specific goals for Operations, Customer Service and Revenue, then begin structured weekly reviews." },
+  { week: "Week 4", title: "Review and decide", text: "Deliver an adoption and data-quality review, refine targets and decide whether rewards or leaderboards are ready." },
+];
+
+const osItems = [
+  { n: "01", name: "Direction OS", question: "Where exactly is Byon going?", answer: "A 12-month direction and one practical 90-day goal." },
+  { n: "02", name: "Performance OS", question: "How does each team deliver it?", answer: "Role goals, key actions, results, owners and reviews." },
+  { n: "03", name: "Money OS", question: "What affects revenue and profit?", answer: "Connect commercial outcomes to operational drivers." },
+  { n: "04", name: "Reward OS", question: "What happens when results improve?", answer: "Transparent recognition, Diamonds and approved rewards." },
+  { n: "05", name: "Talent OS", question: "Who owns the work and needs support?", answer: "Role fit, capability gaps and development priorities." },
+  { n: "06", name: "AI Execution OS", question: "What should AI handle?", answer: "Automate repeatable work with explicit human approval." },
 ];
 
 export default function Home() {
   return (
-    <div className="app-shell">
-      <aside className="rail">
-        <a className="brand" href="#overview" aria-label="Byon Suites Reward home">
-          <span className="brand-mark">B</span>
-          <span><strong>Byon Suites</strong><small>Reward</small></span>
+    <main>
+      <nav className="site-nav" aria-label="Proposal navigation">
+        <a className="brand" href="#top" aria-label="Vimigo proposal home">
+          <span className="brand-mark">V</span>
+          <span><strong>vimigo</strong><small>Proposal for Byon Suites</small></span>
         </a>
-
-        <nav className="nav" aria-label="Reward portal navigation">
-          <a className="active" href="#overview"><span>01</span> Overview</a>
-          <a href="#performance"><span>02</span> My performance</a>
-          <a href="#recognition"><span>03</span> Recognition</a>
-          <a href="#standing"><span>04</span> Team standing</a>
-          <a href="#rules"><span>05</span> Reward rules</a>
-        </nav>
-
-        <div className="rail-profile">
-          <span className="avatar">AR</span>
-          <span><strong>Aina Rahman</strong><small>Operations</small></span>
+        <div className="nav-links">
+          <a href="#opportunity">Opportunity</a>
+          <a href="#solution">Solution</a>
+          <a href="#roadmap">30-day plan</a>
+          <a className="nav-cta" href="#next-step">Next step</a>
         </div>
-      </aside>
+      </nav>
 
-      <main id="overview">
-        <header className="topbar">
-          <div>
-            <p className="eyebrow">Good afternoon, Aina</p>
-            <h1>Your reward dashboard</h1>
+      <section className="hero" id="top">
+        <div className="hero-copy">
+          <p className="kicker">Business transformation proposal · July 2026</p>
+          <h1>Turn daily operations into <em>visible, accountable performance.</em></h1>
+          <p className="hero-lead">
+            Vimigo can help Byon Suites connect company direction, department KPIs,
+            weekly execution and fair recognition — without forcing a full-company
+            rollout on Day 1.
+          </p>
+          <div className="hero-actions">
+            <a className="button button-primary" href="#solution">See the proposed approach</a>
+            <a className="button button-ghost" href="#roadmap">View 30-day roadmap</a>
           </div>
-          <div className="top-actions">
-            <span className="period">July 2026</span>
-            <a className="outline-button" href="#rules">How it works</a>
-          </div>
-        </header>
-
-        <section className="summary-grid" aria-label="Reward summary">
-          <article className="reward-card">
-            <div className="reward-top">
-              <p>Available reward balance</p>
-              <span className="tier">Gold tier</span>
-            </div>
-            <div className="points">1,840 <span>points</span></div>
-            <div className="reward-bottom">
-              <div><small>Estimated reward value</small><strong>RM184 <em>demo</em></strong></div>
-              <div className="monthly-score"><strong>92%</strong><small>monthly score</small></div>
-            </div>
-          </article>
-
-          <article className="standing-card">
-            <p className="section-label">Department standing</p>
-            <div className="rank-line"><strong>#2</strong><span>of 11 departments</span></div>
-            <h2>Operations is in stride</h2>
-            <p>Only 3 points behind the current leader. Keep guest-ready checks consistent.</p>
-            <div className="meter" aria-label="Operations score 92 out of leader score 95"><span /></div>
-            <div className="meter-meta"><span>Operations 92</span><span>Leader 95</span></div>
-          </article>
-        </section>
-
-        <section className="panel performance" id="performance">
-          <div className="panel-heading">
-            <div><p className="section-label">Performance</p><h2>July KPI progress</h2></div>
-            <span className="score-pill">Monthly score 92%</span>
-          </div>
-          <div className="kpi-grid">
-            {kpis.map((kpi) => (
-              <article className="kpi" key={kpi.name}>
-                <div className="kpi-value"><span>{kpi.name}</span><strong>{kpi.value}%</strong></div>
-                <div className="progress" aria-label={`${kpi.name}: ${kpi.value}%`}><span style={{ width: `${kpi.value}%` }} /></div>
-                <p>{kpi.note}</p>
-              </article>
-            ))}
-          </div>
-        </section>
-
-        <div className="lower-grid">
-          <section className="panel" id="recognition">
-            <div className="panel-heading">
-              <div><p className="section-label">Recognition</p><h2>Recent wins</h2></div>
-              <span className="quiet-link">This month</span>
-            </div>
-            <div className="recognition-list">
-              {recognition.map((item) => (
-                <article className="recognition-row" key={item.title}>
-                  <span className="award-mark">{item.mark}</span>
-                  <div><h3>{item.title}</h3><p>{item.note}</p></div>
-                  <strong>{item.points}</strong>
-                </article>
-              ))}
-            </div>
-          </section>
-
-          <section className="panel leaderboard" id="standing">
-            <div className="panel-heading">
-              <div><p className="section-label">Team pulse</p><h2>Department standing</h2></div>
-            </div>
-            <div className="leader-list">
-              {departments.map((department) => (
-                <div className={department.active ? "leader active" : "leader"} key={department.name}>
-                  <span>{department.rank}</span><strong>{department.name}</strong><b>{department.score}</b>
-                </div>
-              ))}
-            </div>
-          </section>
         </div>
 
-        <section className="rules" id="rules">
-          <div>
-            <p className="section-label">Fair and transparent</p>
-            <h2>How Byon rewards should work</h2>
+        <aside className="proposal-note" aria-label="Our recommendation">
+          <p>Our strongest recommendation</p>
+          <h2>Start with one focused 30-day implementation.</h2>
+          <div className="pilot-teams">
+            <span>Operations</span>
+            <span>Customer Service</span>
+            <span>Revenue Team</span>
           </div>
-          <div className="rule-grid">
-            <article><span>01</span><h3>Role-relevant KPIs</h3><p>Your score reflects results you can influence, not one scorecard for everyone.</p></article>
-            <article><span>02</span><h3>Quality protects value</h3><p>Revenue and speed are balanced with service, quality, safety and accuracy.</p></article>
-            <article><span>03</span><h3>Human approval</h3><p>Complaints and low reviews trigger review, not automatic punishment or deduction.</p></article>
-          </div>
-          <div className="demo-notice"><strong>Demo reward rules - pending management approval.</strong> Points, RM conversion and rankings shown here are sample data for concept validation.</div>
-        </section>
+          <p className="note-copy">Prove the management rhythm and data first. Expand rewards, leaderboards and AI automation only after the foundation is trusted.</p>
+        </aside>
+        <div className="hero-index">01 / Proposal</div>
+      </section>
 
-        <footer><span>Byon Suites Reward</span><span>Recognition that connects daily work to better guest stays.</span></footer>
-      </main>
-    </div>
+      <section className="context-strip" aria-label="Byon Suites context">
+        <p>Built around Byon Suites&apos; current structure</p>
+        <div><strong>11</strong><span>department KPI scorecards</span></div>
+        <div><strong>HQ + Sites</strong><span>multi-location operating model</span></div>
+        <div><strong>1 Goal</strong><span>shared 90-day management focus</span></div>
+      </section>
+
+      <section className="section opportunity" id="opportunity">
+        <div className="section-intro">
+          <p className="kicker dark">The opportunity</p>
+          <h2>Byon does not need another KPI file. It needs a system that makes the KPIs work.</h2>
+          <p>Your existing KPI draft already defines meaningful measures across departments. The next challenge is turning those measures into a repeatable management rhythm.</p>
+        </div>
+        <div className="challenge-list">
+          {challenges.map((challenge) => (
+            <article key={challenge.number}>
+              <span>{challenge.number}</span>
+              <div><h3>{challenge.title}</h3><p>{challenge.text}</p></div>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      <section className="section solution" id="solution">
+        <div className="solution-heading">
+          <p className="kicker">What Vimigo changes</p>
+          <h2>From “management chasing” to a performance-driven operating rhythm.</h2>
+          <p>Vimigo is not only HR software and not only a KPI tool. It connects direction, execution, evidence, review and recognition.</p>
+        </div>
+        <div className="solution-flow">
+          {solutionSteps.map((step, index) => (
+            <article key={step.label}>
+              <div className="flow-number">{String(index + 1).padStart(2, "0")}</div>
+              <p>{step.label}</p>
+              <h3>{step.title}</h3>
+              <span>{step.text}</span>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      <section className="section operating-model">
+        <div className="section-intro compact">
+          <p className="kicker dark">The Vimigo framework</p>
+          <h2>Six operating systems, one management language.</h2>
+          <p>For Byon, the first priority is Direction, Performance and disciplined execution. Reward and AI come in when the data and ownership are ready.</p>
+        </div>
+        <div className="os-grid">
+          {osItems.map((item) => (
+            <article key={item.n}>
+              <span>{item.n}</span>
+              <h3>{item.name}</h3>
+              <p>{item.question}</p>
+              <small>{item.answer}</small>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      <section className="section pilot">
+        <div className="pilot-copy">
+          <p className="kicker">Recommended pilot</p>
+          <h2>One guest journey. Three connected departments.</h2>
+          <p>Start where commercial performance and guest experience meet: Revenue sets the demand and pricing direction, Operations delivers unit readiness, and Customer Service protects the guest relationship.</p>
+          <div className="pilot-chain" aria-label="Recommended pilot departments">
+            <span>Revenue Team</span><b>→</b><span>Operations</span><b>→</b><span>Customer Service</span>
+          </div>
+        </div>
+        <div className="pilot-deliverables">
+          <p>What management receives</p>
+          <ul>
+            <li>One agreed 90-day goal and pilot success criteria</li>
+            <li>Role-specific KPI definitions and accountable owners</li>
+            <li>A weekly review rhythm with exception follow-up</li>
+            <li>A first-month adoption and data-quality report</li>
+            <li>A go / adjust / expand decision for Phase 2</li>
+          </ul>
+        </div>
+      </section>
+
+      <section className="section roadmap" id="roadmap">
+        <div className="section-intro compact">
+          <p className="kicker dark">Implementation roadmap</p>
+          <h2>A 30-day management implementation — not a software setup exercise.</h2>
+        </div>
+        <div className="timeline">
+          {roadmap.map((item, index) => (
+            <article key={item.week}>
+              <div className="timeline-marker"><span>{index + 1}</span></div>
+              <p>{item.week}</p>
+              <h3>{item.title}</h3>
+              <small>{item.text}</small>
+            </article>
+          ))}
+        </div>
+        <div className="roadmap-guardrail"><strong>Important:</strong> Cash rewards, negative scoring and leaderboards should not launch until management, Finance and department owners approve the rules and the underlying data is reliable.</div>
+      </section>
+
+      <section className="section outcomes">
+        <div className="outcomes-heading">
+          <p className="kicker">Expected business outcomes</p>
+          <h2>Better management visibility first. Measurable performance improvement next.</h2>
+          <p>Exact ROI and reward budgets should be confirmed only after Byon validates its baseline data.</p>
+        </div>
+        <div className="outcome-list">
+          {outcomes.map((outcome, index) => (
+            <div key={outcome}><span>{String(index + 1).padStart(2, "0")}</span><p>{outcome}</p></div>
+          ))}
+        </div>
+      </section>
+
+      <section className="next-step" id="next-step">
+        <p className="kicker">Recommended next step</p>
+        <h2>Run a 60-minute management diagnosis before discussing software modules.</h2>
+        <p>Confirm Byon&apos;s top three bottlenecks, select the pilot goal and appoint one accountable owner. From there, Vimigo can prepare the exact 30-day scope, implementation responsibilities and commercial proposal.</p>
+        <div className="decision-row">
+          <div><span>Decision needed</span><strong>Approve the management diagnosis</strong></div>
+          <div><span>Suggested owner</span><strong>CEO / General Manager</strong></div>
+          <div><span>Output</span><strong>Prioritised 30-day pilot scope</strong></div>
+        </div>
+        <a className="button button-light" href="#top">Review proposal from the top</a>
+      </section>
+
+      <footer>
+        <div className="footer-brand"><span className="brand-mark">V</span><strong>vimigo</strong></div>
+        <p>Prepared for Byon Suites · Private discussion draft · July 2026</p>
+        <p>Scope, pricing, ROI and reward mechanics are subject to management validation.</p>
+      </footer>
+    </main>
   );
 }
